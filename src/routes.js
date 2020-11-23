@@ -22,8 +22,9 @@ import Register from "views/examples/Register.js";
 import Login from "views/examples/Login.js";
 import Tables from "views/examples/Tables.js";
 import Icons from "views/examples/Icons.js";
+import ProductTable from "views/products/ProductTable";
 
-var routes = [
+export var oldRoutes = [
   {
     path: "/index",
     name: "Dashboard",
@@ -73,5 +74,23 @@ var routes = [
     component: Register,
     layout: "/auth"
   }
+];
+
+var routes = [
+  {
+    path: "/index",
+    name: "Dashboard",
+    icon: "ni ni-tv-2 text-primary",
+    component: Index,
+    layout: "/admin"
+  },
+  {
+    path: "/products",
+    name: "Products",
+    icon: "ni ni-planet text-blue",
+    component: ProductTable,
+    layout: "/admin"
+  },
+
 ];
 export default routes;
